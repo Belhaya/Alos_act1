@@ -1,0 +1,5 @@
+Cache-Control:
+L'en-tête HTTP Cache-Control contient des directives pour la mise en cache tant dans les requêtes que dans les réponses.
+tlque Une directive donnée dans une requête ne signifie pas que la même directive doit se trouver dans la réponse.
+No-cache:
+Indique de renvoyer systématiquement la requête au serveur et ne servir une éventuelle version en cache que dans le cas où le serveur le demande.
