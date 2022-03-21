@@ -1,0 +1,16 @@
+
+var unirest =require ("unirest");
+var req  =unirest("GET","http://localhost:3000/posts_programme_alimentaire_entrainement");
+var _ =require("lodash")
+module .exports  =function filter_name(){
+    return{
+        posts_programme_alimentaire_entrainement:_.times(100,filter_name(name.startWith("M")),{
+            return:{
+                    name: unirest.filter_name(),
+                    id:unirest.findId(),
+            }
+        
+
+    })    
+    }
+}
