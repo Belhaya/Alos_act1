@@ -3,7 +3,7 @@ var unirest =require ("unirest")
 function filter()
 {
     
-    var r =unirest("GET","http://localhost:3000/programme_sportif?$filter=startswith(nom,'M')eq true")
+    var r =unirest("GET","http://localhost:3000/post_programme_sportif?$filter=startswith(nom,'M')eq true")
 
     r.headers(
         {
