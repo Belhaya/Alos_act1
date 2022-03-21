@@ -1,0 +1,176 @@
+JG.repeat(100, {
+  
+      
+         id: JG.index(),
+         nom:JG.lastName(),
+         prénom:JG.firstName(),
+         sexe: JG.random('homme','femme'),
+         poid: JG.floating(45,120),
+         taille:JG.floating(1.5,2),
+         age:JG.integer(20,70),
+         
+              masse_musculaire:function (tags) {
+             return (
+                     ((this.poid*0.407)+(this.taille*0.267))); },
+         
+         
+         
+         nécessité_eau_en_litre:function (tags) {
+             return ( 
+                     (((((this.poid-20)*15)+1500)*0.001))+                              ("     litre"));
+              },
+         
+     
+       
+ 
+    programmes:{
+                     
+      programme_alimentaire:{ 
+           
+ 	          type_régime:JG.random({
+                        végétarien:{
+                        période:JG.random('2 mois'),
+                        recette:{
+                          menu1:{
+                          Petit_déjeuner:JG.random('Mousse choco-noisettes'),
+                            Déjeuner:JG.random('Soupe de maïs à l’indienne'),
+                            Dîner:JG.random('Salade de seigle aux oranges sanguines')
+                            
+                          },
+                          
+                          menu2:{
+                          Petit_déjeuner:JG.random('Carottes à la marocaine'),
+                            Déjeuner:JG.random('Soupe de tortillas au quinoa'),
+                            Dîner:JG.random('Pommes au four à la québécoise')},
+                          
+                         menu3:{
+                          Petit_déjeuner:JG.random('Salade d’endives, pommes et mimolette'),
+                            Déjeuner:JG.random('Salade de chèvres chauds aux poires'),
+                            Dîner:JG.random('Salade de fruits d’hiver')},
+                          menu4:{
+                          Petit_déjeuner:JG.random('Coleslaw'),
+                            Déjeuner:JG.random('Gratin d’haricots blancs à la tomate'),
+                            Dîner:JG.random('Oranges rôties au four')}
+                          
+                        }
+                        }},
+                                    
+                        {protéine:{
+                        période:JG.random('15 jours'),
+                        recette:{
+                         menu1:{
+                          Petit_déjeuner:JG.random('café, thé sans sucre, 1 yaourt au soja, 1/5 de baguette tradition, 1 noix de beurre'),
+                         Déjeuner:JG.random('salade composée (huile dolive, huile de colza), 1 blanc de volaille grillé, haricots verts, 1 petit-suisse'),
+                            Dîner:JG.random('1 dos de merlan, tomates, 1 portion de fromage de chèvre frais')
+                            
+                          },
+                          
+                          menu2:{
+                          Petit_déjeuner:JG.random('café, thé non sucré, 1 fromage blanc au soja, 1/5 de baguette tradition, 1 noix de beurre'),
+                            Déjeuner:JG.random('1 salade verte, 1 dos de cabillaud, 1 portion de quinoa, 1 petit-suisse'),
+                            Dîner:JG.random('1 tranche de jambon, ratatouille, 1 Carré frais 0 %')},
+                          
+                         menu3:{
+                          Petit_déjeuner:JG.random('café, thé non sucré, 1 fromage blanc, 1/5 de baguette tradition, 1 noix de beurre'),
+                            Déjeuner:JG.random('concombre, blanc de poulet, champignons, 1 yaourt'),
+                            Dîner:JG.random(' 1 limande sole, lentilles, 1 yaourt nature')},
+                         menu4:{
+                          Petit_déjeuner:JG.random(' thé ou café non sucré, 1 petit-suisse nature, 1/5 de baguette tradition, 1 noix de beurre'),
+                            Déjeuner:JG.random('radis, 1 noix de beurre, épinards, 1 yaourt au soja'),
+                            Dîner:JG.random(' 1 steack de soja, 1 purée daubergines, 1 fromage blanc au soja')
+                            
+                          },
+                        
+                        }
+                        }},
+                                    
+                        { hypocalorique:{
+                         période:JG.random('1 mois'),
+                        recette:{
+                         menu1:{
+                          Petit_déjeuner:JG.random('une boisson chaude (café, thé ou tisane) sans sucre et 1/2 pamplemousse, orange ou autre agrume.'),
+                            Déjeuner:JG.random('150 g de steak ou un filet de poulet ou de dinde grillé, salade verte avec des tomates à volonté, une pomme.'),
+                            Dîner:JG.random('2 œufs durs ou 150 g de blanc de poulet ou de dinde, haricots verts, épinards ou brocolis à volonté, 1/2 pamplemousse, orange ou autre agrume.')
+                            
+                          },
+                          
+                          menu2:{
+                          Petit_déjeuner:JG.random('une boisson chaude (café, thé ou tisane) sans sucre et 1/2 pamplemousse, orange ou autre agrume'),
+                            Déjeuner:JG.random('150 g de steak ou un filet de poulet ou de dinde grillé, salade verte, un grand verre de jus de tomate a assaisonner avec du tabasco ou de sel de céleri si nécessaire.'),
+                            Dîner:JG.random('choux-fleur ou courgettes à volonté, haricots verts, épinards ou brocolis aussi à volonté, compote de pommes sans sucre.')},
+                          
+                         menu3:{
+                          Petit_déjeuner:JG.random('une boisson chaude (café, thé ou tisane) sans sucre et 1/2 pamplemousse, orange ou autre agrume.'),
+                            Déjeuner:JG.random('150 g de steak ou un filet de poulet ou de dinde grillé, salade verte à volonté, une pomme.'),
+                            Dîner:JG.random('150 à 200 g de poulet grillé, tomate à l’étuvée à volonté (vous pouvez les assaisonner avec des épices ou des aromates), un grand verre de jus de pruneaux.')},
+                          menu4:{
+                          Petit_déjeuner:JG.random('une boisson chaude (café, thé ou tisane) sans sucre et 1/2 pamplemousse, orange ou autre agrume.'),
+                            Déjeuner:JG.random('2 œufs durs ou 150 g de dinde, haricots verts, épinards ou brocolis à volonté, un verre de jus de tomate.'),
+                            Dîner:JG.random('150 g de steak ou un filet de poulet ou de dinde grillé, salade verte à volonté, un verre de jus d’ananas sans sucre.')}
+                        
+                        }
+                        }},
+                                    
+                        { sans_sel:{
+                        période:JG.random('3 mois'),
+                        recette:{
+                          menu1:{
+                          Petit_déjeuner:JG.random('Flocons d’avoine non raffinés avec du lait demi-écrémé + pruneaux Banane'),
+                            Déjeuner:JG.random('Gaspacho de betterave au vinaigre balsamique, filet mignon de porc aux oignons nouveaux, pâtes au quinoa, fromage blanc aux dés de poire et noix du Brésil'),
+                            Dîner:JG.random('Salade de riz, crevettes, avocat, champignons crus + vinaigrette aux paillettes d’algues+Yaourt nature + compote pomme fraise ')
+                                  
+                            
+                          },
+                          
+                          menu2:{
+                          Petit_déjeuner:JG.random('Thé vert, tartines de pain complet + miel d’acacia, yaourt au bifidus + dés de kiwi'),
+                            Déjeuner:JG.random('Soupe vietnamienne de nouilles de riz, brocolis et cabillaud à la coriandre, Compote pomme-rhubarbe'),
+                            Dîner:JG.random('Poêlée de légumes primeurs aux herbes et huile d’olive, gâteau au yaourt citron graines de pavot')},
+                          
+                         menu3:{
+                          Petit_déjeuner:JG.random('Smoothie carotte + pomme acidulée + citron + gingembre,pain d’épice maison'),
+                            Déjeuner:JG.random('Salade de jeunes pousses, vinaigrette citronnée, aiguillettes de canard au miel et sésame,Purée de carottes au thym,Ananas frais'),
+                            Dîner:JG.random('Curry de lentilles vertes et légumes printaniers,Papillote de banane à l’orange, sirop d’érable et noix de Pécan')},
+                          menu4:{
+                          Petit_déjeuner:JG.random('Infusion,1 pomelo,Œuf coque, mouillettes de pain aux céréales'),
+                            Déjeuner:JG.random('Papillote de saumon aux asperges vertes, pommes de terre vapeur,Fromage blanc + salade de fruits frais à la menthe'),
+                            Dîner:JG.random('Salade de fèves aux poivrons,Crème renversée à la vanille')}
+                         
+                        
+                        
+                        }
+                                            }
+
+    })
+    },
+         
+      programme_entraînement:{
+        
+        		type_entraînement:JG.random({
+                    cardio:{
+                    exercices_populaires:JG.random('1 marcher et courir, 2 fentes, 3 sauter sur trampolineet 4 vélo et vélo d’appartement'),
+                        }},
+                                    
+                    {Entraînement_en_circuit:{
+               exercices_populaires:JG.random('1 bascule sur une jambe ,2 sauts avec une corde à sauter, 3 squats et 4 pompes'),
+                        }},
+                                    
+                    { Entraînement_fonctionnel:{
+                     exercices_populaires:JG.random('1 grosses et petites boules, 2 plates-formes d’équilibrage et 3 bandes TRX'),
+                        }},
+                                    
+                     { Crossfit:{
+                      exercices_populaires:JG.random('1 squats avec une barre,2 soulevés des poids, 3 exercices avec battle rope et 4 sits up'),
+                                            },
+
+    })
+      			
+      
+      
+      
+      },   
+         
+         
+         
+         
+    }});
