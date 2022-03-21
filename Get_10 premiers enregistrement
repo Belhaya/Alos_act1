@@ -2,7 +2,7 @@
 
 var unirest =require ("unirest")
 
-var req  =unirest("GET","http://localhost:3000?_limit=10/")
+var req  =unirest("GET","http://localhost:3000/post_programme_sportif?_limit=10/")
  req.headers(
      {
          "cache-control": "no-cache",
