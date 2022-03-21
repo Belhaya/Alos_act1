@@ -1,12 +1,12 @@
 
 var unirest =require ("unirest");
-var req  =unirest("GET","http://localhost:3000/posts_programme_alimentaire_entrainement");
+var req  =unirest("GET","http://localhost:3000/post_programme_sportif");
 var _ =require("lodash")
 module .exports  =function filter_name(){
     return{
-        posts_programme_alimentaire_entrainement:_.times(100,filter_name(name.startWith("M")),{
+        post_programme_sportif:_.times(100,filter_name(nom.startWith("M")),{
             return:{
-                    name: unirest.filter_name(),
+                    nom: unirest.filter_name(),
                     id:unirest.findId(),
             }
         
